@@ -3,6 +3,5 @@ python-dotenv>=1.0.0
 pypdf>=4.0.0
 streamlit
 ollama
-google-genai
 # Optional — uncomment if you add a Streamlit UI (stretch goal):
 # streamlit>=1.30.0
