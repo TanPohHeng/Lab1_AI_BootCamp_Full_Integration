@@ -15,14 +15,15 @@ import json
 import os
 import sys
 import time
+from google import genai
+from google.genai import types
 
 from dotenv import load_dotenv
 from litellm import completion
 import litellm
 
 load_dotenv()
-
-_MODEL = os.getenv("MODEL", "openai/gpt-4o-mini")
+_MODEL = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Phrases that indicate the LLM violated the anti-rewrite rule.
 _REWRITE_MARKERS = ("here is a rewritten", "improved version:")
